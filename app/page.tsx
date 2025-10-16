@@ -6,7 +6,6 @@ import type { Map as LeafletMap, Layer } from "leaflet"
 import type { FeatureCollection, Feature } from "geojson"
 import Sidebar from "@/components/sidebar"
 import MapLegend from "@/components/map-legend"
-import TimelineControl from "@/components/timeline-control"
 import { calculateBounds } from "@/lib/geo-utils"
 
 export default function WorldMapPage() {
@@ -381,18 +380,6 @@ export default function WorldMapPage() {
               </MapContainer>
 
               <MapLegend />
-
-              {dates.length > 0 && (
-                <TimelineControl
-                  currentDate={currentDate}
-                  onDateChange={setCurrentDate}
-                  isPlaying={isPlaying}
-                  onPlayToggle={handlePlayToggle}
-                  dates={dates}
-                  playbackSpeed={playbackSpeed}
-                  onSpeedChange={handleSpeedChange}
-                />
-              )}
             </div>
           )
         )}
