@@ -1,4 +1,9 @@
-export default function MapTooltip({ content, position }) {
+interface MapTooltipProps {
+  content: React.ReactNode
+  position: { x: number; y: number } | null
+}
+
+export default function MapTooltip({ content, position }: MapTooltipProps) {
   if (!position) return null
 
   return (
