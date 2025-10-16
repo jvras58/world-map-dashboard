@@ -7,9 +7,8 @@ import 'leaflet/dist/leaflet.css';
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Global Satisfaction Map",
-  description: "Interactive world map showing customer satisfaction data",
-    generator: 'v0.app'
+  title: " Map",
+  description: "Interactive map",
 }
 
 export default function RootLayout({
